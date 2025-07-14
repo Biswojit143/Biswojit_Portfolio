@@ -4,7 +4,7 @@ import TextChange from "../TextChange";
 
 const Home = () => {
   return (
-    <div className="text-white flex flex-col md:flex-row w-full justify-between items-center p-6 md:p-20 gap-10">
+    <div className="text-white flex flex-col md:flex-row w-full justify-between items-center p-6 md:p-20 gap-10 ">
       {/* Left Text Section */}
       <div className="w-full md:w-2/4 md:pt-10 text-center md:text-left">
         <h1 className="text-xl md:text-6xl font-bold leading-normal tracking-tighter">
@@ -28,16 +28,16 @@ const Home = () => {
           DOWNLOAD CV
         </a>
       </div>
-
       {/* Right Image Section */}
       <div className="relative">
-        <div className="w-[250px] h-[250px] md:w-[400px] md:h-[400px] rounded-full bg-gradient-to-br from-purple-600 to-indigo-500 p-1 shadow-xl transition-transform duration-300 hover:scale-105">
+        <div className="w-[250px] h-[250px] md:w-[400px] md:h-[400px] rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 p-1 shadow-xl transition-transform duration-300 hover:scale-105">
           <img
             src={avatarImg}
             alt="My_New_photo"
             className="w-full h-full object-cover rounded-full"
           />
         </div>
+
       </div>
     </div>
   );

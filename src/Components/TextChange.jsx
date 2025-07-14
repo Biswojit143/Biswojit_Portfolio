@@ -27,7 +27,7 @@ const TextChange = () => {
     return () => clearInterval(intervalId);
   }, [endValue, isForward, index, texts]);
 
-  return <div className="transition ease duration-300 text-cyan-400">{currenText}</div>;
+  return <div className=" mt-10 transition ease duration-300 text-cyan-400">{currenText}</div>;
   
 };
 

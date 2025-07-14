@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <div
-  id="About"
-  className="scroll-mt-28 text-white flex flex-col md:flex-row items-center justify-center bg-black shadow-xl mx-4 md:mx-20 bg-opacity-30 rounded-3xl p-6 md:p-16 gap-8 md:gap-20 overflow-hidden"
->
-
+      id="About"
+      className="text-white flex flex-col md:flex-row items-center justify-center bg-black bg-opacity-30 shadow-xl mx-4 md:mx-20 rounded-3xl p-6 md:p-16 gap-8 md:gap-20 overflow-hidden
+      pt-[80px] -mt-[80px]"
+    >
       {/* Animated Profile Image */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -56,9 +56,9 @@ const About = () => {
               Skills
             </h3>
             <p className="text-md md:text-lg leading-relaxed">
-              MERN stack includes React.js, Node.js, Express.js, MongoDB, Git, GitHub,
-              Tailwind CSS, and deployment platforms like Netlify & Vercel. I
-              create responsive UI, scalable APIs, and maintain clean,
+              MERN stack includes React.js, Node.js, Express.js, MongoDB, Git,
+              GitHub, Tailwind CSS, and deployment platforms like Netlify &
+              Vercel. I create responsive UI, scalable APIs, and maintain clean,
               well-documented code.
             </p>
           </div>
