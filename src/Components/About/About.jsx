@@ -7,7 +7,9 @@ const About = () => {
     <div
       id="About"
       className="text-white flex flex-col md:flex-row items-center justify-center bg-black bg-opacity-30 shadow-xl mx-4 md:mx-20 rounded-3xl p-6 md:p-16 gap-8 md:gap-20 overflow-hidden
-      pt-[80px] -mt-[80px]"
+        scroll-mt-24
+      "
+      /* scroll-mt-24 adds a 6rem (96px) margin on top when scrolled to */
     >
       {/* Animated Profile Image */}
       <motion.div
@@ -57,8 +59,8 @@ const About = () => {
             </h3>
             <p className="text-md md:text-lg leading-relaxed">
               MERN stack includes React.js, Node.js, Express.js, MongoDB, Git,
-              GitHub, Tailwind CSS, and deployment platforms like Netlify &
-              Vercel. I create responsive UI, scalable APIs, and maintain clean,
+              GitHub, Tailwind CSS, and deployment platforms like Netlify & Vercel. I
+              create responsive UI, scalable APIs, and maintain clean,
               well-documented code.
             </p>
           </div>
