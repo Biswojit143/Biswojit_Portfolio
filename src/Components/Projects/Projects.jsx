@@ -36,7 +36,7 @@ const Projects = () => {
             title="Nexture UI Clone"
             main="A clean UI clone of YouTube built with React and Tailwind. Implements dark theme, responsive video grid, and interactive search bar to mimic YouTube's user experience."
             image={youtubeImg}
-            link="file://D:/Qlith/MERN02M002/June/week1/Assignment3/index.html" // Use a live link instead of file:///
+            link="https://nexcentqlithbbsr.netlify.app/" // Use a live link instead of file:///
           />
         </div>
       </div>
