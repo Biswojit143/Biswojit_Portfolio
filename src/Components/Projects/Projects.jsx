@@ -7,40 +7,42 @@ import youtubeImg from "../../assets/Nexture.png";
 
 const Projects = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // run animation once on scroll
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
-    <div id="Projects" className="p-10 md:p-24 text-white border-purple-700 min-h-screen">
-      
-      {/* Sticky title */}
-      <h1
-        className="text-3xl md:text-5xl font-extrabold text-white mb-12 text-center sticky top-0 border-purple-700 z-10 py-4"
-      >
-        My Projects
-      </h1>
+    <section
+      id="Projects"
+      className="px-4 sm:px-6 md:px-10 lg:px-20 py-16 border-purple-700 text-white min-h-screen"
+    >
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-12">
+        My <span className="text-purple-500">Projects</span>
+      </h2>
 
-      {/* Projects grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div data-aos="fade-up">
-          <ProjectCard
-            title="Apple Website Clone"
-            main="A modern blogging website built with Next.js, inspired by the Apple homepage. It features smooth transitions, clean layout, and responsive design using Tailwind CSS."
-            image={apploImg}
-            link="https://qlithbiswo.netlify.app/"
-          />
-        </div>
+        {/* Apple Website Clone */}
+        <ProjectCard
+          title="Apple Website Clone"
+          main="I led a team to develop an Apple website clone using HTML, CSS, and JavaScript. This project aimed to replicate Apple’s clean, responsive, and interactive UI. I managed task distribution, maintained consistent design, and delivered a responsive layout across devices."
+          image={apploImg}
+          link="https://qlithbiswo.netlify.app/"
+          github="https://github.com/Biswojit143/Qlith--Apple-Website-Clone"
+          aosType="fade-up"
+          aosDelay="0"
+        />
 
-        <div data-aos="fade-up" data-aos-delay="200">
-          <ProjectCard
-            title="Nexture UI Clone"
-            main="A clean UI clone of YouTube built with React and Tailwind. Implements dark theme, responsive video grid, and interactive search bar to mimic YouTube's user experience."
-            image={youtubeImg}
-            link="https://nexcentqlithbbsr.netlify.app/" // Use a live link instead of file:///
-          />
-        </div>
+        {/* Nexture UI Clone */}
+        <ProjectCard
+          title="Nexture UI Clone"
+          main="Nexture UI is a clean and modern frontend project created with HTML and CSS. It focuses on responsive design, reusable UI components, and semantic code structure. The design includes mobile-friendly layouts, consistent spacing, and cross-browser compatibility."
+          image={youtubeImg}
+          link="https://nexcentqlithbbsr.netlify.app/"
+          github="https://github.com/Biswojit143/MERN02M002/tree/main/June/week1/Assignment3"
+          aosType="fade-up"
+          aosDelay="200"
+        />
       </div>
-    </div>
+    </section>
   );
 };
 

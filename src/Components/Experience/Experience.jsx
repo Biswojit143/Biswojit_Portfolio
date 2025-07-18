@@ -26,18 +26,21 @@ const Experience = () => {
   }, []);
 
   return (
-    <section id="Experience" className="border-purple-700 py-20 px-6 md:px-24">
+    <section
+      id="Experience"
+      className="py-16 px-6 md:px-20 scroll-mt-24"
+    >
       <h1
-        className="text-4xl font-bold text-center text-white mb-16 tracking-wide"
+        className="text-4xl sm:text-5xl font-extrabold text-center text-white mb-16"
         data-aos="fade-up"
       >
-        My <span className="text-purple-500">Experience</span>
+        <span className="text-purple-500">My</span> Experience
       </h1>
 
-      <div className="flex flex-col md:flex-row justify-around items-center gap-12">
+      <div className="flex flex-col lg:flex-row flex-wrap justify-between items-center gap-10 lg:gap-16">
         {/* Tech Icons */}
         <div
-          className="grid grid-cols-3 sm:grid-cols-4 gap-6 p-8 bg-[#1a1c2c] rounded-2xl shadow-xl border border-purple-700"
+          className="w-full lg:w-[45%] grid grid-cols-3 sm:grid-cols-4 gap-6 p-6 sm:p-8 bg-[#1a1c2c] rounded-2xl shadow-xl border border-purple-700"
           data-aos="fade-right"
         >
           {techIcons.map((item, i) => (
@@ -53,22 +56,24 @@ const Experience = () => {
 
         {/* Experience Card */}
         <div
-          className="bg-gradient-to-br from-[#1a1c2c] to-[#1f2233] p-6 md:p-8 rounded-2xl border border-purple-700 shadow-xl w-full md:w-1/2"
+          className="w-full lg:w-[50%] bg-gradient-to-br from-[#1a1c2c] to-[#1f2233] p-6 sm:p-8 rounded-2xl border border-purple-700 shadow-xl"
           data-aos="fade-left"
         >
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <img
-              src="https://www.qlith.com/assets/Logo-Cpn1bFyJ.png"
-              alt="Qlith Logo"
-              className="h-16 md:h-20 object-contain animate-pulse"
-            />
+            <div className="flex-shrink-0 flex items-center justify-center">
+              <img
+                src="https://www.qlith.com/assets/Logo-Cpn1bFyJ.png"
+                alt="Qlith Logo"
+                className="h-16 md:h-20 object-contain animate-pulse"
+              />
+            </div>
             <div className="text-white text-center sm:text-left">
               <h2 className="text-xl md:text-2xl font-semibold mb-1">
                 MERN Stack Intern –{" "}
-                <span className="text-purple-400">Qlith Innovation</span>
+                <span className="text-teal-400">Qlith Innovation</span>
               </h2>
               <p className="text-sm text-gray-400 mb-2">May 2025 - Present</p>
-              <ul className="text-sm text-gray-300 list-disc list-inside">
+              <ul className="text-sm text-gray-300 list-disc list-inside space-y-1">
                 <li>Working as a Full Stack Developer.</li>
                 <li>Handling frontend with ReactJS and backend with Node.js.</li>
                 <li>Database integration using MongoDB.</li>

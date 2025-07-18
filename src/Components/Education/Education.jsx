@@ -40,42 +40,55 @@ const Education = () => {
   }, []);
 
   return (
-    <section id="Education" className="border-purple-700 py-20 px-6 md:px-24 text-white">
-      <h1 className="text-3xl md:text-5xl font-bold text-center mb-16">My Education</h1>
+    <section
+      id="Education"
+      className="-mt-20 px-6 md:px-20 py-20 border-purple-700 text-white"
+    >
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-16">
+        My <span className="text-purple-500">Education</span>
+      </h2>
 
       <div className="relative">
-        {/* Vertical timeline line */}
+        {/* Vertical center line */}
         <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-purple-700" />
 
-        {/* Cards */}
-        <div className="space-y-14 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-20 md:gap-y-24">
+        {/* Education cards with connectors */}
+        <div className="md:grid md:grid-cols-2 md:gap-y-10">
           {educationData.map((edu, index) => {
             const isLeft = index % 2 === 0;
+            const aosType = isLeft ? "fade-right" : "fade-left";
+            const cardPosition = isLeft ? "md:pr-12 md:items-end" : "md:pl-12 md:items-start";
+            const connectorSide = isLeft ? "right-0" : "left-0";
+            const connectorOffset = isLeft ? "md:-mr-[2px]" : "md:-ml-[2px]";
 
             return (
               <div
                 key={index}
-                data-aos={isLeft ? "fade-right" : "fade-left"}
-                className={`relative md:max-w-md p-6 bg-[#1a1c2c] rounded-2xl shadow-lg border border-purple-700 hover:shadow-purple-500 transition transform hover:-translate-y-3 duration-300 ${
-                  isLeft ? "md:ml-auto md:text-right" : "md:mr-auto md:text-left"
-                }`}
+                className={`relative flex flex-col ${cardPosition}`}
+                style={{ marginTop: `${index * 20}px` }} // reduced spacing
               >
-                {/* Icon bubble */}
+                {/* Connector from card to center line */}
                 <div
-                  className={`hidden md:flex absolute top-10 ${
-                    isLeft ? "-right-6" : "-left-6"
-                  } w-12 h-12 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full items-center justify-center shadow-lg`}
-                >
-                  <FaGraduationCap className="text-white text-2xl" />
-                </div>
+                  className={`hidden md:block absolute top-6 ${connectorSide} h-1 w-8 bg-purple-600 ${connectorOffset} z-0`}
+                ></div>
 
-                {/* Card Content */}
-                <h2 className="text-2xl font-bold mb-2 capitalize">{edu.degree}</h2>
-                <p className="text-gray-300 text-sm font-semibold mb-2">
-                  {edu.institution}
-                </p>
-                <p className="text-gray-400 text-sm mb-4 italic">{edu.about}</p>
-                <div className="text-sm text-gray-400 font-mono">{edu.year}</div>
+                {/* Card */}
+                <div
+                  data-aos={aosType}
+                  className="relative bg-[#1a1c2c] border border-purple-700 rounded-2xl shadow-lg hover:shadow-purple-500 transform hover:-translate-y-1 transition duration-300 px-6 py-6 md:w-full z-10"
+                >
+                  <div className="flex items-center gap-4 mb-2">
+                    <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center shadow-md">
+                      <FaGraduationCap className="text-white text-xl" />
+                    </div>
+                    <h3 className="text-xl font-bold capitalize">{edu.degree}</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm font-semibold mb-1">{edu.institution}</p>
+                  <p className="text-gray-400 text-sm mb-3 italic leading-relaxed">
+                    {edu.about}
+                  </p>
+                  <div className="text-sm text-gray-400 font-mono">{edu.year}</div>
+                </div>
               </div>
             );
           })}

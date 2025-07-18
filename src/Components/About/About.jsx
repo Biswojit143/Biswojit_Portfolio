@@ -1,72 +1,58 @@
 import React from "react";
-import AboutImg from "../../assets/passport-photo.png";
 import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div
+    <section
       id="About"
-      className="text-white flex flex-col md:flex-row items-center justify-center bg-black bg-opacity-30 shadow-xl mx-4 md:mx-20 rounded-3xl p-6 md:p-16 gap-8 md:gap-20 overflow-hidden
-        scroll-mt-24
-      "
-      /* scroll-mt-24 adds a 6rem (96px) margin on top when scrolled to */
+      className="w-full px-6 md:px-20 py-16 scroll-mt-24"
     >
-      {/* Animated Profile Image */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, type: "spring", bounce: 0.4 }}
-        viewport={{ once: true }}
-        className="relative group w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-purple-600 to-indigo-500 p-1 shadow-2xl"
-      >
-        <div className="absolute -inset-1 animate-pulse bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full blur opacity-30 group-hover:opacity-50 transition" />
-        <img
-          src={AboutImg}
-          alt="About"
-          className="w-full h-full object-cover rounded-full z-10 relative transition-transform duration-300 group-hover:scale-105"
-        />
-      </motion.div>
+      <div className="w-full bg-[#1a1c2c] backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl p-8 sm:p-12 space-y-16">
+        {/* Header */}
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-4xl sm:text-5xl font-extrabold text-center text-white"
+        >
+          <span className="text-purple-500">About</span> Me
+        </motion.h2>
 
-      {/* About Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="max-w-2xl text-center md:text-left"
-      >
-        <h2 className="text-3xl md:text-5xl font-bold mb-10 text-white">
-          About Me
-        </h2>
-
-        <div className="space-y-10 text-gray-300">
-          <div>
-            <h3 className="text-cyan-400 text-2xl font-semibold mb-2">
-              Who I Am
-            </h3>
-            <p className="text-md md:text-lg leading-relaxed">
-              I’m a passionate MERN Stack Developer (MongoDB, Express.js,
-              React.js, Node.js) with a strong foundation in full-stack
-              development. As a fresher, I bring eagerness to learn, hands-on
-              experience from projects, and a love for solving real-world
-              problems with beautiful, functional code.
+        {/* Sections */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left"
+        >
+          {/* Who I Am */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-teal-400">Who I Am</h3>
+            <p className="text-gray-200 text-base leading-relaxed">
+              I'm a passionate <span className="text-white font-medium">MERN Stack Developer</span> with a love for crafting interactive web applications. I enjoy turning complex problems into clean and user-friendly designs.
             </p>
           </div>
 
-          <div>
-            <h3 className="text-cyan-400 text-2xl font-semibold mb-2">
-              Skills
-            </h3>
-            <p className="text-md md:text-lg leading-relaxed">
-              MERN stack includes React.js, Node.js, Express.js, MongoDB, Git,
-              GitHub, Tailwind CSS, and deployment platforms like Netlify & Vercel. I
-              create responsive UI, scalable APIs, and maintain clean,
-              well-documented code.
+          {/* Skills */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-teal-400">Skills</h3>
+            <p className="text-gray-200 text-base leading-relaxed">
+              Proficient in <span className="text-white">React, Node.js, Express, MongoDB</span>, and familiar with tools like <span className="text-white">Git, Tailwind CSS, and Vercel</span>. I write code that’s clean, scalable, and performance-optimized.
             </p>
           </div>
-        </div>
-      </motion.div>
-    </div>
+
+          {/* Passion */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-teal-400">My Passion</h3>
+            <p className="text-gray-200 text-base leading-relaxed">
+              I thrive on building elegant UIs, pushing performance boundaries, and collaborating with creative minds. I'm a lifelong learner and love exploring new technologies every day.
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
