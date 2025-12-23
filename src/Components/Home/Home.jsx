@@ -39,7 +39,7 @@ const Home = () => {
           <img
             src={avatarImg}
             alt="My_New_photo"
-            className="w-full h-full object-cover rounded-full"
+            className="w-full h-full object-cover rounded-full."
           />
         </div>
       </div>
