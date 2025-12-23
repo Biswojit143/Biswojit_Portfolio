@@ -1,12 +1,12 @@
 import React from "react";
-import avatarImg from "../../assets/My_New_photo.jpg";
+import avatarImg from "../../assets/My_New_photo.jpg"; // Prefer PNG for transparent background
 import TextChange from "../TextChange";
 
 const Home = () => {
   return (
     <section
       id="Home"
-      className="pt-16 text-white flex flex-col md:flex-row w-full justify-between items-center md:items-center px-4 sm:px-8 md:px-16 lg:px-20 py-10 gap-10 scroll-mt-24"
+      className="pt-16 text-white flex flex-col md:flex-row w-full justify-between items-center px-4 sm:px-8 md:px-16 lg:px-20 py-10 gap-10 scroll-mt-24"
     >
       {/* Left Text Section */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
@@ -38,8 +38,8 @@ const Home = () => {
         <div className="w-full h-full rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 p-1 shadow-xl transition-transform duration-300 hover:scale-105">
           <img
             src={avatarImg}
-            alt="My_New_photo"
-            className="w-full h-full object-cover rounded-full."
+            alt="My Photo"
+            className="w-full h-full object-cover rounded-full"
           />
         </div>
       </div>

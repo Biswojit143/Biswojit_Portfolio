@@ -62,7 +62,7 @@ const Experience = () => {
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="flex-shrink-0 flex items-center justify-center">
               <img
-                src="https://www.qlith.com/assets/Logo-Cpn1bFyJ.png"
+                src="src/assets/Logo-Cpn1bFyJ.png"
                 alt="Qlith Logo"
                 className="h-16 md:h-20 object-contain animate-pulse"
               />
